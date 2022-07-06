@@ -18,7 +18,7 @@ streamlit.text('🥑🍞 Avocado Toast')
 streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 
 #create a pick list and add some preselected fruits
-streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries'])
+#streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries'])
 
 #put selcted fruits into a variable
 fruits_selected=streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries'])
@@ -29,4 +29,4 @@ streamlit.dataframe(fruits_to_show)
 
 
 # display csv file with pandas
-streamlit.dataframe(my_fruit_list)
+#streamlit.dataframe(my_fruit_list)
