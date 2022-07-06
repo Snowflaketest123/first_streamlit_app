@@ -29,4 +29,4 @@ streamlit.dataframe(fruits_to_show)
 
 
 # display csv file with pandas
-#streamlit.dataframe(my_fruit_list)
+streamlit.dataframe(my_fruit_list)
