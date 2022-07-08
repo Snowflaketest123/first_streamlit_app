@@ -1,8 +1,7 @@
 import streamlit
 import pandas
 import requests
-fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
-streamlit.write('The user entered ', fruit_choice)
+
 fruityjuice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
 
 #load Data from txt into Variable my_fruit_list
@@ -33,6 +32,8 @@ streamlit.dataframe(fruits_to_show)
 
 #New Section for requests
 streamlit.header('Frutyvice Fruit Advise')
+fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
+streamlit.write('The user entered ', fruit_choice)
 
 #json output for fruityjuice respons
 #streamlit.text(fruityjuice_response.json())
