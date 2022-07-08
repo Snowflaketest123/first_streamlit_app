@@ -2,7 +2,7 @@ import streamlit
 import pandas
 import requests
 
-fruityjuice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
+fruityjuice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 
 #load Data from txt into Variable my_fruit_list
 my_fruit_list =pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
@@ -41,7 +41,7 @@ streamlit.write('The user entered ', fruit_choice)
 #normalize the json
 fruityvice_normalized=pandas.json_normalize(fruityjuice_response.json())
 #-> output
-streamlit.dataframe(fruit_choice)
+streamlit.dataframe(fruityvice_normalized)
 
 # display csv file with pandas
 streamlit.dataframe(my_fruit_list)
