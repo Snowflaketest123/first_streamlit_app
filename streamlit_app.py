@@ -2,7 +2,7 @@ import streamlit
 import pandas
 import requests
 
-fruityjuice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+fruityjuice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
 
 #load Data from txt into Variable my_fruit_list
 my_fruit_list =pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
