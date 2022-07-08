@@ -3,7 +3,6 @@ import pandas
 import requests
 
 fruityjuice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-streamlit.text(fruityjuice_response)
 
 #load Data from txt into Variable my_fruit_list
 my_fruit_list =pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
@@ -33,7 +32,7 @@ streamlit.dataframe(fruits_to_show)
 
 #New Section for requests
 streamlit.header('Frutyvice Fruit Advise')
-streamlit.text(fruityjuice_response)
+streamlit.text(fruityjuice_response.json())
 
 # display csv file with pandas
 streamlit.dataframe(my_fruit_list)
