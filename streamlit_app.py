@@ -41,7 +41,7 @@ streamlit.write('The user entered ', fruit_choice)
 #normalize the json
 fruityvice_normalized=pandas.json_normalize(fruityjuice_response.json())
 #-> output
-streamlit.dataframe(fruityvice_normalized)
+streamlit.dataframe(fruit_choice)
 
 # display csv file with pandas
 streamlit.dataframe(my_fruit_list)
