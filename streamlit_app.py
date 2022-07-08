@@ -34,7 +34,7 @@ streamlit.dataframe(fruits_to_show)
 streamlit.header('Frutyvice Fruit Advise')
 
 #json output for fruityjuice respons
-streamlit.text(fruityjuice_response.json())
+#streamlit.text(fruityjuice_response.json())
 
 #normalize the json
 fruityvice_normalized=pandas.json_normalize(fruityjuice_response.json())
