@@ -58,7 +58,7 @@ except URLError as e:
 streamlit.write('The user entered ', fruit_choice)
 
 
-streamlit.header("View OUR FRuit List - Add your Favorites:")
+streamlit.header("View OUR FRuit List - Add your Favorites!")
 #Snoflake related functions
 def get_fruit_load_list():
     with my_cnx.cursor() as my_cur:
