@@ -40,7 +40,7 @@ def get_fruitvice_data(this_fruit_choice):
   fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
   #normalize the json
   fruityvice_normalized=pandas.json_normalize(fruityvice_response.json())
-  return fruitvice_normalized
+  return fruityvice_normalized
 
 #New Section for requests
 streamlit.header('Frutyvice Fruit Advise')
@@ -56,12 +56,6 @@ except URLError as e:
   streamlit.error()
         
 streamlit.write('The user entered ', fruit_choice)
-
-
-
-
-
-
 
 
 # display csv file with pandas
