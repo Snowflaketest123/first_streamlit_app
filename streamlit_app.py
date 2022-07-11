@@ -1,6 +1,8 @@
 import streamlit
 import pandas
 import requests
+import snowflake.connector
+from urllib.error import URLError
 
 
 
@@ -48,7 +50,9 @@ streamlit.dataframe(fruityvice_normalized)
 # display csv file with pandas
 streamlit.dataframe(my_fruit_list)
 
-import snowflake.connector
+#don´t run anything past here while we troubleshoot
+
+
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("Select * from fruit_load_list")
