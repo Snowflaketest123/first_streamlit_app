@@ -46,7 +46,8 @@ try:
         #streamlit.text(fruityvice_response.json())
         #-> output
         streamlit.dataframe(fruityvice_normalized)
-expect URLError as e:
+
+except URLError as e:
   streamlit.error()
         
 streamlit.write('The user entered ', fruit_choice)
