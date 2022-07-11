@@ -47,3 +47,5 @@ streamlit.dataframe(fruityvice_normalized)
 
 # display csv file with pandas
 streamlit.dataframe(my_fruit_list)
+
+import snowflake.connect
