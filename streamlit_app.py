@@ -34,7 +34,7 @@ streamlit.dataframe(fruits_to_show)
 
 #New Section for requests
 streamlit.header('Frutyvice Fruit Advise')
-  try:
+try:
       fruit_choice = streamlit.text_input('What fruit would you like information about?')
       if not fruit_choice:
         streamlit.error("Please select a fruit to get information.")
@@ -46,7 +46,7 @@ streamlit.header('Frutyvice Fruit Advise')
         #streamlit.text(fruityvice_response.json())
         #-> output
         streamlit.dataframe(fruityvice_normalized)
- expect URLError as e:
+expect URLError as e:
   streamlit.error()
         
 streamlit.write('The user entered ', fruit_choice)
